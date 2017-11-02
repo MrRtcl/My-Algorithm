@@ -5,42 +5,43 @@
 #define MAX 2000
 using namespace std;
 int sum[MAX<<1],n,m;
-int lowbit(int x){
-    return x&(-x);
-}
-
-int add(int k,int c){
-    for(;k <= n;k += lowbit(k)){
-        sum[k] += c;
+struct BIT{
+    int lowbit(int x){
+        return x&(-x);
+    }
+    
+    int add(int k,int c){
+        for(;k <= n;k += lowbit(k)){
+            sum[k] += c;
+        }
+    }
+    
+    int query(int k){
+        int ans = 0;
+        for(;k;k -= lowbit(k)){
+            ans += sum[k];
+        }
+        return ans;
     }
 }
 
-int query(int k){
-    int ans = 0;
-    for(;k;k -= lowbit(k)){
-        ans += sum[k];
+inline int read(){
+    int w=1,x=0;
+    char c=0;
+    while(c<'0'||c>'9'){
+        if(c=='-')
+            w = -1;
+        c = getchar();
     }
-    return ans;
+    while(c>='0'&&c<='9'){
+        x = (x<<3)+(x<<1)+c-'0';
+        c = getchar(); 
+    }
+    return w*x;
 }
 
 int main(){
     freopen("data.in","r",stdin);
-    cin >> n >> m;
-    for(register int i = 1;i <= n;i++){
-        int a;
-        cin >> a;
-        add(i,a);
-    }
-    while(m--){
-        int a,b,c;
-        cin >> a >> b >> c;
-        if(a == 1){
-            add(b,c);
-        }else{
-            int tmp1 = query(b-1);
-            int tmp2 = query(c);
-            cout << tmp2-tmp1 << endl;
-        }
-    }
+
     return 0;
 }
