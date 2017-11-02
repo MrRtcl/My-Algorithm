@@ -9,6 +9,8 @@
         "cstring": "cpp",
         "cmath": "cpp",
         "cctype": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "istream": "cpp",
+        "streambuf": "cpp"
     }
 }
