@@ -11,6 +11,7 @@
         "cctype": "cpp",
         "*.tcc": "cpp",
         "istream": "cpp",
-        "streambuf": "cpp"
+        "streambuf": "cpp",
+        "system_error": "cpp"
     }
 }
