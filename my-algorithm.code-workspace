@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp",
+			"initializer_list": "cpp",
+			"type_traits": "cpp",
+			"ostream": "cpp",
+			"limits": "cpp",
+			"cstdio": "cpp",
+			"cstring": "cpp",
+			"cmath": "cpp",
+			"cctype": "cpp",
+			"*.tcc": "cpp",
+			"istream": "cpp",
+			"streambuf": "cpp",
+			"system_error": "cpp"
+		}
+	}
+}
