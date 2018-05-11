@@ -61,35 +61,33 @@ void splay(node *&x,node *&to){
     while(x->pre != s){
         p = x->pre;
         if(p->pre == s){
-            if(p->l == x){
+            if(p->l = x){
                 rrotate(x);
             }else{
-                lrotate(x);
-            }
-            break;
-        }
-        if(x == p->l){
-            if(p == p->pre->l){
-                rrotate(p);
-                rrotate(x);
-            }else{
-                rrotate(x);
                 lrotate(x);
             }
         }else{
-            if(p == p->pre->r){
-                lrotate(p);
-                lrotate(x);
+            if(x == p->l){
+                if(p == p->pre->l){
+                    rrotate(p);
+                    rrotate(x);
+                }else{
+                    rrotate(x);
+                    lrotate(x);
+                }
             }else{
-                lrotate(x);
-                rrotate(x);
+                if(p == p->pre->r){
+                    lrotate(p);
+                    lrotate(x);
+                }else{
+                    lrotate(x);
+                    rrotate(x);
+                }
             }
         }
     }
     to = x;
 }
-
-nod 
 
 int main(){
     return 0;

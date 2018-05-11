@@ -48,6 +48,7 @@ int find(int s,int t,int l,int r,int k){
 }
 
 int main(){
+	freopen("1.in","r",stdin);
 	scanf("%d %d",&n,&m);
 	for(int i = 1;i <= n;i++){
 		scanf("%d",&arr[i]);
