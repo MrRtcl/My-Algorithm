@@ -1,2 +1,0 @@
-# My-Algorithm
-My Algorithm
