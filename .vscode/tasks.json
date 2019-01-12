@@ -7,10 +7,10 @@
         "type": "shell",
         "command": "g++",
         "args": [
+            "-g",
             "${file}",
             "-o",
             "${fileDirname}/${fileBasenameNoExtension}.out",
-            "-g"
         ],            
         "group": {
             "kind": "build",
