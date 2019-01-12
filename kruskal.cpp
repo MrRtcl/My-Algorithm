@@ -33,8 +33,8 @@ void kruskal(){
 
 int main(int argc, char const *argv[])
 {
-//    freopen("mytools/data.in","r",stdin);
-//    freopen("data.out","w",stdout);
+    freopen("data.in","r",stdin);
+    freopen("data.out","w",stdout);
     cin >> n >> m;
     for(int i=1;i<=m;i++){
         int a,b,w;
